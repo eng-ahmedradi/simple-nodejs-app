@@ -40,7 +40,6 @@ jobs:
           name: app
 
       - run: docker build -t ahmedradii/simple-nodejs-app:latest .
-- run: echo "Username is ${{ secrets.DOCKER_USERNAME }}"
       - uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
